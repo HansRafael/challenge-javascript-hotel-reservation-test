@@ -2,10 +2,10 @@
 //I tried to write this code following the rules that I have been learning from the book "Clean Code" 
 
 //create all the days with your type date (weekend or weekday)
-let daysOfweek = { mon: 'weekday', tues: 'weekday', wed: 'weekday', thur: 'weekday', fri:'weekday', sat:'weekend', sun:'weekend'
+var daysOfweek = { mon: 'weekday', tues: 'weekday', wed: 'weekday', thur: 'weekday', fri:'weekday', sat:'weekend', sun:'weekend'
 }
 //create JSON objects for each hotel. In this way, it is simply adding a new hotel without modifying the code
-let hotelAvaliable = require('./util/hotel.json')
+var hotelAvaliable = require('./util/hotel.json')
 
 function treatInput(input){
     let typeDate = []
