@@ -6,13 +6,13 @@ const hotels = require('../src/main')
 const getCheapestHotel = hotels.getCheapestHotel 
 
 describe('test', function () {
-  it('3 weekdays regular should return Lakewood', function () {
+  it('should return Lakewood', function () {
     expect(getCheapestHotel("Regular: 16Mar2009(mon), 17Mar2009(tues), 18Mar2009(wed)")).to.equal("Lakewood");
   });
-  it('1 weekday and 2 weekend regular should return Bridgewood', function () {
+  it('should return Bridgewood', function () {
     expect(getCheapestHotel("Regular: 20Mar2009(fri), 21Mar2009(sat), 22Mar2009(sun)")).to.equal("Bridgewood");
   });
-  it('2 weekday and 1 weekend rewards should return Ridgewood', function () {
+  it('should return Ridgewood', function () {
     expect(getCheapestHotel("Rewards: 26Mar2009(thur), 27Mar2009(fri), 28Mar2009(sat)")).to.equal("Ridgewood");
   });
   it('3 weekdays rewards should return Lakewood', function () {
