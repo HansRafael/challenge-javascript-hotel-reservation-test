@@ -71,13 +71,7 @@ function getCheapestHotel (input) { //DO NOT change the function's name.
         costTotalByClient = 0;
     }
     );
-
     return nameBestPriceHotel;
 }
-
-getCheapestHotel("Regular: 16Mar2009(mon), 17Mar2009(tues), 18Mar2009(wed), 19Mar2009(thur), 20Mar2009(fri), 21Mar2009(sat), 22Mar2009(sun)");
-getCheapestHotel("Rewards: 16Mar2009(mon), 17Mar2009(tues), 18Mar2009(wed), 19Mar2009(thur), 20Mar2009(fri), 21Mar2009(sat), 22Mar2009(sun)");
-getCheapestHotel("Rewards: 20Mar2009(sat)");
-getCheapestHotel("Regular: 20Mar2009(sat)");
 
 exports.getCheapestHotel = getCheapestHotel
