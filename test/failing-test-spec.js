@@ -42,12 +42,19 @@ describe('test', function () {
   it('One weekend reward: should return Ridgewood', function () {
     expect(getCheapestHotel("Rewards: 20Mar2009(sat)")).to.equal("Ridgewood");
   });
+  it('3 weekday and 2 weekend Regular: should return Lakewood', function () {
+    expect(getCheapestHotel("Regular: 18Mar2009(wed), 19Mar2009(thur), 20Mar2009(fri), 21Mar2009(sat), 22Mar2009(sun)")).to.equal("Lakewood");
+  });
+  it('3 weekday and 2 weekend Rewards: should return Lakewood', function () {
+    expect(getCheapestHotel("Rewards: 18Mar2009(wed), 19Mar2009(thur), 20Mar2009(fri), 21Mar2009(sat), 22Mar2009(sun)")).to.equal("Ridgewood");
+  });
   it('8 days Regular: should return Lakewood', function () {
     expect(getCheapestHotel("Regular: 16Mar2009(mon), 17Mar2009(tues), 18Mar2009(wed), 19Mar2009(thur), 20Mar2009(fri), 21Mar2009(sat), 22Mar2009(sun), 23Mar2009(mon)")).to.equal("Lakewood");
   });
   it('8 days Reward: should return Lakewood', function () {
     expect(getCheapestHotel("Rewards: 16Mar2009(mon), 17Mar2009(tues), 18Mar2009(wed), 19Mar2009(thur), 20Mar2009(fri), 21Mar2009(sat), 22Mar2009(sun), 23Mar2009(mon)")).to.equal("Lakewood");
   });
+
   it('void function () should return Invalid Input', function () {
     expect(getCheapestHotel()).to.equal("Invalid Input!");
   });
