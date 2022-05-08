@@ -3,12 +3,12 @@
 
 //create all the days with your type date (weekend or weekday)
 var daysOfweek = { mon: 'weekday', tues: 'weekday', wed: 'weekday', thur: 'weekday', fri:'weekday', sat:'weekend', sun:'weekend'
-}
+};
 //create JSON objects for each hotel. In this way, it is simply adding a new hotel without modifying the code
-var hotelAvaliable = require('./util/hotel.json')
+var hotelAvaliable = require('./util/hotel.json');
 
 function treatInput(input){
-    let typeDate = []
+    let typeDate = [];
     //We need to treat the input, spliting in comma and colon
     let newSplit = input.split(/[:,]/);
 
@@ -19,7 +19,7 @@ function treatInput(input){
     let wordsBetween = /\((.*)\)/;
     for(dayWeek of newSplit){
         typeDate.push(dayWeek.match(wordsBetween)[1])
-    }
+    };
     
     return [typeClient, typeDate];
 }
@@ -41,7 +41,7 @@ function getCheapestHotel (input) { //DO NOT change the function's name.
     
     values = treatInput(input);
     typeClient = values[0];
-    typeDate = values[1]
+    typeDate = values[1];
     
     //As the hotels are in an Array it's possible to run a map method to get all information about it
     hotelAvaliable.map((hotel) =>{
@@ -50,7 +50,7 @@ function getCheapestHotel (input) { //DO NOT change the function's name.
 
         //Calculating the total cost of each day in different hotels
         for(let dayInArray=0; dayInArray < typeDate.length; dayInArray++){
-            day = daysOfweek[typeDate[dayInArray]]
+            day = daysOfweek[typeDate[dayInArray]];
             costTotalByClient += hotel[typeClient][day];
         }
         //add cost and classification in each 'hotelPrices' object
@@ -72,6 +72,6 @@ function getCheapestHotel (input) { //DO NOT change the function's name.
     }
     );
     return nameBestPriceHotel;
-}
+};
 
-exports.getCheapestHotel = getCheapestHotel
+exports.getCheapestHotel = getCheapestHotel;
