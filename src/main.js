@@ -18,11 +18,11 @@ function treatInput(input){
     //A regex to find the days out between the parentheses like: (mon), (thus) and add to the array typeDate
     let wordsBetween = /\((.*)\)/;
     for(dayWeek of newSplit){
-        typeDate.push(dayWeek.match(wordsBetween)[1])
+        typeDate.push(dayWeek.match(wordsBetween)[1]);
     };
     
     return [typeClient, typeDate];
-}
+};
 
 function getCheapestHotel (input) { //DO NOT change the function's name.
     //First, I check to see if the input is valid. I was thinking of creating a validation of input.
