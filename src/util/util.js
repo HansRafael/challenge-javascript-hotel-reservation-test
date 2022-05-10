@@ -4,18 +4,10 @@ the input method to a JSON. In this way, I would be able to verify each label of
 Would be something like:
 Method: POST
 {
-    nameHotel: String,
-    classificationStar: Number,
-    clientType: {
-        "regular": {
-            "weekday": Number,
-            "weekend": Number
-        },
-        "rewards": {
-            "weekday": Number,
-            "weekend": Number
-        }
-    }
+    clientType: String,
+    hotelReservation: [{
+        date: Date()
+    }]
 }`
 
 function treatInput(input){
