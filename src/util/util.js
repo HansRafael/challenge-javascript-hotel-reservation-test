@@ -1,5 +1,5 @@
 `First, I check to see if the input is valid. I was thinking of creating a validation of input.
-But is hard to check if a string input is valid. So if I were to check, first I would change
+But is hard to check if a string input is valid. So if I was to check, first I would change
 the input method to a JSON. In this way, I would be able to verify each label of type and dates.
 Would be something like:
 Method: POST
